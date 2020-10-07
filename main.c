@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* ex1 */
+/* ex2 */
 
 int main(int argc, char *argv[]) {
 	
@@ -10,10 +10,10 @@ int main(int argc, char *argv[]) {
 	scanf("%d",&num);
 	
 	if(num>0)
-		printf("양수입니다.");
+		printf("절대값은 %d 입니다.",num);
 	else if(num<0)
-		printf("음수입니다.");
+		printf("절대값은 %d 입니다.",-num);
 	else
-		printf("0입니다."); 
+		printf("절대값은 %d 입니다.",num); 
 	return 0;
 }
