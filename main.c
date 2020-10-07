@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* ex3 */
+/* ex4 */
 
 int main(int argc, char *argv[]) {
 
-	int cnt = 0;
-	char c;
-	printf("Input a string:");
-	while ((c = getchar()) != '\n')
+	int num;
+	int sum=0;
+	int i;
+	
+	printf("Input a number:");
+	scanf("%d",&num);
+	
+	for(i=1;i<=num;i++)
 	{
-		if (48 <= c && c <= 57)
-			cnt++;
+		sum+=i;
 	}
-
-	printf("the number of digits is %d", cnt);
-
+    printf("The result is %d",sum);
+    
 	return 0;
 }
