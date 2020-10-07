@@ -1,23 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* ex5 */
+/* ex6 */
 
 int main(int argc, char *argv[]) {
 
-	int num1,num2;
-	char op;
-	printf("enter the calculation : ");
-	scanf("%d%c%d",&num1,&op,&num2);
-	
-	if(op=='+')
-		printf("= %d",num1+num2);
-	else if(op=='-')
-		printf("= %d",num1-num2);
-	else if(op=='*')
-		printf("= %d",num1*num2);
-	else if(op=='/')
-		printf("= %d",num1/num2);
-    
-	return 0;
+    int answer=44;
+    int guess;
+    int cnt=0;
+    do{
+        printf("Guess a number :");
+        scanf("%d",&guess);
+        cnt++;
+        if(guess>answer)
+            printf("low!\n");
+        else if(guess<answer)
+            printf("high!\n");
+        else
+        {
+            printf("Congratulation! trials:%d",cnt);
+            break;
+        }
+    }
+    while(guess!='\n');
+    return 0;
 }
